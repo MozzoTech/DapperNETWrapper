@@ -8,9 +8,8 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.ComponentModel.DataAnnotations;
 using Dapper;
-using Humair.Data.Exceptions;
 
-namespace Humair.Data.Dapper
+namespace DapperWrapper
 {
     public class DAPPERWRAPPER : IDisposable
     {
@@ -22,7 +21,7 @@ namespace Humair.Data.Dapper
 
         public DAPPERWRAPPER()
         {
-            connection_string =  ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            connection_string = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             dp = new DynamicParameters();
         }
         public DAPPERWRAPPER(string connection_string_key_name)
@@ -861,7 +860,7 @@ namespace Humair.Data.Dapper
                     case 2627:
                         throw new UNIQUE_KEY_CONSTRAINT_EXCEPTION(ex.Message);
                     default:
-                       throw ex;
+                        throw ex;
                 }
             }
             catch (Exception ex)
@@ -999,7 +998,7 @@ namespace Humair.Data.Dapper
         // does not get called.
         // It gives your base class the opportunity to finalize.
         // Do not provide destructors in types derived from this class.
-        ~DAPPER_DATA_SERVICE()
+        ~DAPPERWRAPPER()
         {
             Dispose(false);
         }
