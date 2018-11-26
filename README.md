@@ -7,5 +7,4 @@ PM> Install-Package Dapper -Version 1.50.5
 
 You can find more details from link https://www.nuget.org/packages/Dapper/
 
-
-
+You need to change database configuration settings in Web.Config.
