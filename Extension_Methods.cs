@@ -1,6 +1,7 @@
 using System.Linq;
 using Dapper;
-namespace Humair.Data.Dapper
+
+namespace DapperWrapper
 {
     public static class EXTENSION_METHODS
     {
