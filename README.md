@@ -15,5 +15,4 @@ If you have any query feel free to email me at humair@writeme.com
 
 Thank you
 Humair Ahmed
-
 Software Architect
